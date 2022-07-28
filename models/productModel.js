@@ -1,8 +1,9 @@
 import mongoose from 'mongoose';
 
-const busSchema = new mongoose.Schema(
-    {
+const productSchema = new mongoose.Schema(
+  {
     name: { type: String, required: true, unique: true},
+    slug: { type: String, required: true, unique: true},
     departureTime: { type: String, required: true},
     arrivaltime: { type: String, required: true},
     fare: { type: Number , required: true},
@@ -12,11 +13,11 @@ const busSchema = new mongoose.Schema(
         number: {type: String},
         isBooked: {type : Boolean, default: false} 
     }]
-    },
-    {
-        timestamps: true
-    }
+},
+{
+  timestamps: true,
+}
 );
 
-const Bus = mongoose.model('Bus', busSchema);
-export default Bus;
+const Product = mongoose.model('Product', productSchema);
+export default Product;

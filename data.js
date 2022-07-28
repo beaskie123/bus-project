@@ -13,9 +13,10 @@ const data = {
             password: bcrypt.hashSync('12345')
         }
     ],
-    bus: [
+    products: [
         {
             name:"JAC LINERS",
+            slug: "jac-liner",
             departureTime: '06:00 AM',
             arrivaltime: '07:00AM',
             fare: 250,
@@ -36,6 +37,7 @@ const data = {
         },
         {
             name:"BGC LINERS",
+            slug: 'bgc-liner',
             departureTime: '06:00 AM',
             arrivaltime: '07:00AM',
             fare: 250,
@@ -56,6 +58,7 @@ const data = {
         },
         {
             name:"LUCENA LINES",
+            slug: 'lucena-liner',
             departureTime: '09:00 AM',
             arrivaltime: '12:00PM',
             fare: 250,
@@ -76,6 +79,7 @@ const data = {
         },
         {
             name:"HM TRANSPORT",
+            slug: "hm-transport",
             departureTime: '06:00 AM',
             arrivaltime: '07:00AM',
             fare: 250,
@@ -96,6 +100,7 @@ const data = {
         },
         {
             name:"DELA ROSA TRANSIT",
+            slug: 'dela-rosa-transit',
             departureTime: '06:00 AM',
             arrivaltime: '07:00AM',
             fare: 250,
