@@ -24,5 +24,26 @@ productRouter.get('/:id', async (req, res) => {
     res.status(404).send({ message: 'Product Not Found' });
   }
 });
+productRouter.post('/search', async ( req,res) => {
 
+  const droppingPoints = req.body.droppingPoints;
+  console.log(droppingPoints)
+
+    if(droppingPoints !== ''){
+    const product = await Product.find({droppingPoints:droppingPoints})
+    console.log(product)
+    if (product) {
+      res.send(product);
+    } else {
+      res.status(404).send({ message: 'Product Not Found' });
+    }
+  }else{
+    const product = await Product.find()
+    if (product) {
+      res.send(product);
+    } else {
+      res.status(404).send({ message: 'Product Not Found' });
+    }
+  }
+})
 export default productRouter;
